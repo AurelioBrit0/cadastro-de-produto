@@ -1,0 +1,26 @@
+.formulario{
+width: 1000px;
+height: auto;
+margin-top: 90px;
+margin-left: 800px;
+}
+
+.form-group ::placeholder{
+    font-size: 17px;
+    color: #323232;
+}
+
+.form_cadastro{
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 4px 4px #323232;
+    display: flex;
+}
+
+.tabela td{
+    padding: 6px 10px;
+    background-color: #7e97f1;
+    border-radius: 10px;
+   
+ }
