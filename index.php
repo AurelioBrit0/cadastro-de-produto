@@ -31,7 +31,6 @@
     </style>
 </head>
 <body>
-<?php error_reporting(E_ERROR); ?>
 
 <div class="formulario" style="
 
@@ -44,16 +43,17 @@
             </div></br>
 
             <div class="form-group">
-                <input class="form_cadastro" type="text" id="descrição" name="descrição" placeholder="Descrição" required="">
+                <input class="form_cadastro" type="text" id="descricao" name="descricao" placeholder="Descrição" required="">
             </div></br>
 
             <div class="form-group">
-                <input class="form_cadastro" type="number" id="preço" name="preço" placeholder="Preço" required="">
+                <input class="form_cadastro" type="number" id="preco" name="preco" placeholder="Preço" required="">
             </div></br>
 
             <div class="form-group">
                 <input class="form_cadastro" type="number" id="estoque" name="estoque" placeholder="Estoque" required="">
             </div></br>
+
             <button class="bnt_confirmar_registrar" type="submit" name="submit" style=" 
             margin-left: 113px;
     background-color: 1px solid black;
@@ -62,6 +62,7 @@
     color: #0a0a0a;
     border-radius: 7px;
     font-size: 17px;">Confirmar!</button>
+
 </form>
 </div>
 <div class="tabela">
@@ -81,17 +82,18 @@
                 $resultado = mysqli_query($conexao,$consulta);
 
                 while ($linha = mysqli_fetch_array($resultado)){
+                    $id = $linha["id"];
                     $nome = $linha["nome"];
-                    $descrição = $linha["descrição"];
-                    $preço = $linha["preço"];
+                    $descricao = $linha["descricao"];
+                    $preco = $linha["preco"];
                     $estoque = $linha["estoque"];
                     echo "
                     <tr>
                         <td>$nome</td>
-                        <td>$descrição</td>
-                        <td>$preço</td>
+                        <td>$descricao</td>
+                        <td>$preco</td>
                         <td>$estoque</td>
-                        <td><a href='excluircadastro.php?nome=$nome'>excluir</a></td>
+                        <td><a href='excluircadastro.php?id=$id'>excluir</a></td>
                     </tr>
                     ";
                 }

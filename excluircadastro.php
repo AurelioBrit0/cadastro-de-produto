@@ -1,10 +1,10 @@
 <?php
-$nome = $_GET['nome'];
+$id = $_GET['id'];
 
 
 $conexao = mysqli_connect("localhost", "root", "", "cadastro");
 
-$delete = "delete from estoque where nome = $nome";
+$delete = "delete from estoque where id = $id";
 
 mysqli_query($conexao, $delete);
 

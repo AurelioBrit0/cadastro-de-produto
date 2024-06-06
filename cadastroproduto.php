@@ -1,12 +1,12 @@
 <?php
 $nome = $_POST['nome'];
-$descrição = $_POST['descrição'];
-$preço = $_POST['preço'];
+$descricao = $_POST['descricao'];
+$preco = $_POST['preco'];
 $estoque = $_POST['estoque'];
 
 $conexao = mysqli_connect("localhost", "root", "", "cadastro");
 
-$insert = "insert into estoque (nome, descrição, preço, estoque) values ('$nome', '$descrição', '$preço', '$estoque')";
+$insert = "insert into estoque (nome, descricao, preco, estoque) values ('$nome', '$descricao', $preco, $estoque)";
 
 mysqli_query($conexao, $insert);
 
